@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study MBBS Abroad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white text-center py-20">
+        <h1 class="text-4xl font-bold">Apply Now for MBBS Abroad</h1>
+        <p class="mt-4">Start your journey to becoming a doctor in top global universities.</p>
+        <button class="mt-6 px-6 py-2 bg-white text-blue-600 font-semibold rounded shadow">Apply Now</button>
+    </section>
+
+    <!-- Why Study MBBS Abroad -->
+    <section class="container mx-auto py-12 px-6">
+        <h2 class="text-2xl font-bold text-center">Why Study MBBS Abroad?</h2>
+        <ul class="mt-6 space-y-4 text-gray-700">
+            <li>✅ Affordable tuition fees</li>
+            <li>✅ Globally recognized universities</li>
+            <li>✅ High-quality education & modern infrastructure</li>
+        </ul>
+    </section>
+
+    <!-- Top Countries -->
+    <section class="container mx-auto py-12 px-6">
+        <h2 class="text-2xl font-bold text-center">Top Countries for MBBS</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+            <div class="p-4 bg-white shadow rounded">Russia</div>
+            <div class="p-4 bg-white shadow rounded">Uzbekistan</div>
+            <div class="p-4 bg-white shadow rounded">Kazakhstan</div>
+            <div class="p-4 bg-white shadow rounded">Philippines</div>
+            <div class="p-4 bg-white shadow rounded">Georgia</div>
+            <div class="p-4 bg-white shadow rounded">Kyrgyzstan</div>
+            <div class="p-4 bg-white shadow rounded">Egypt</div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="container mx-auto py-12 px-6">
+        <h2 class="text-2xl font-bold text-center">Admission Process</h2>
+        <ol class="mt-6 space-y-4 text-gray-700 list-decimal list-inside">
+            <li>Choose your preferred country</li>
+            <li>Submit your application & required documents</li>
+            <li>Receive university admission letter</li>
+            <li>Apply for a student visa</li>
+            <li>Fly to your dream destination!</li>
+        </ol>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container mx-auto py-12 px-6 bg-blue-100 rounded">
+        <h2 class="text-2xl font-bold text-center">Apply Now</h2>
+        <form id="leadForm" class="mt-6 space-y-4 max-w-lg mx-auto">
+            <input type="text" id="name" placeholder="Your Name" class="w-full p-2 border rounded">
+            <input type="email" id="email" placeholder="Your Email" class="w-full p-2 border rounded">
+            <input type="text" id="phone" placeholder="Your Phone" class="w-full p-2 border rounded">
+            <select id="country" class="w-full p-2 border rounded">
+                <option value="">Select Country Preference</option>
+                <option value="Russia">Russia</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Egypt">Egypt</option>
+            </select>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded">Submit</button>
+        </form>
+        <p id="formMessage" class="text-center text-red-600 mt-4"></p>
+    </section>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phone = document.getElementById('phone').value;
+            let country = document.getElementById('country').value;
+            let message = document.getElementById('formMessage');
+
+            if (!name || !email || !phone || !country) {
+                message.textContent = "All fields are required!";
+            } else {
+                message.textContent = "Application submitted successfully!";
+                message.classList.add('text-green-600');
+            }
+        });
+    </script>
+</body>
+</html>
